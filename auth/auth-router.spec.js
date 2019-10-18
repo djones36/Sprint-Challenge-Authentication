@@ -34,5 +34,30 @@ describe("auth-router.js", () => {
           expect(res.status).toBe(500);
         });
     });
+    it("returns JSON", () => {
+      const user = { username: "testUser", password: "passwordTest" };
+      return request(server)
+        .post("/api/auth/login")
+        .send(user)
+        .then(res => {
+          expect(res.type).toMatch(/json/i);
+        });
+    });
+  });
+  //get end point
+  describe("server.js", () => {
+    describe("GET /", () => {
+      it("returns 200 OK", () => {
+        return request(server)
+          .get("/api/auth/users")
+          .then(res => {
+            expect(res.status).toBe(200);
+          });
+      });
+      it("should return JSON", async () => {
+        const response = await request(server).get("/api/auth/users");
+        expect(response.type).toMatch(/json/i);
+      });
+    });
   });
 });
