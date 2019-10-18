@@ -47,7 +47,12 @@ Demonstrate your understanding of this week's concepts by answering the followin
 - [x ] What does bcrypt do to slow down attackers?
   bcrypt slowes down attackers by hiding your users information in an encryption that unless they know the algorithm or number of times it was run, they will not be able to decrypt it or it might take time longer.
 
-* [ ] What are the three parts of the JSON Web Token?
+* [ x] What are the three parts of the JSON Web Token?
+
+The three parts of the JSON Web Token:
+1.header: contains the token type.
+2.payload: the data we wish to store in the token.
+3.a string create by encoding the header and payload together that is signed with a secret.
 
 ## Minimum Viable Product
 
