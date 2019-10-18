@@ -11,10 +11,8 @@ router.post("/register", (req, res) => {
 
   Users.add(user)
     .then(newUser => {
-      const token = gt.generateToken(newUser);
       res.status(201).json({
-        message: `successfully registered as ${newUser.username}`,
-        token
+        message: `successfully registered as ${newUser.username} user id ${newUser.id}`
       });
     })
     .catch(error => {
