@@ -44,9 +44,10 @@ Demonstrate your understanding of this week's concepts by answering the followin
 - [ x] What does bcrypt do to help us store passwords in a secure manner.
   the bcyrpt helps us store passwords by running an algorithm that hashes the password multiple times making it hard for a hacker to decode.
 
-- [ ] What does bcrypt do to slow down attackers?
+- [x ] What does bcrypt do to slow down attackers?
+  bcrypt slowes down attackers by hiding your users information in an encryption that unless they know the algorithm or number of times it was run, they will not be able to decrypt it or it might take time longer.
 
-- [ ] What are the three parts of the JSON Web Token?
+* [ ] What are the three parts of the JSON Web Token?
 
 ## Minimum Viable Product
 
