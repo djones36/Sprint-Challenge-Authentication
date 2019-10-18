@@ -24,4 +24,15 @@ describe("auth-router.js", () => {
         });
     });
   });
+
+  //login end point
+  describe("POST /api/auth/login", () => {
+    it("returns status 500", () => {
+      return request(server)
+        .post("/api/auth/login")
+        .then(res => {
+          expect(res.status).toBe(500);
+        });
+    });
+  });
 });
