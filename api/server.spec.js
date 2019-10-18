@@ -7,7 +7,7 @@ describe("server.js", () => {
       return request(server)
         .get("/")
         .then(res => {
-          expect(res.status.toBe(200));
+          expect(res.status).toBe(200);
         });
     });
   });
